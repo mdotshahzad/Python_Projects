@@ -14,7 +14,7 @@ def guess(x):
             print("Your number is shorter than computer's number. try high")
         elif (guess > random_num):
             print("Your number is greater than computer's number try low")
-    print("Yayyyyy: You have guessed the correct number Congratulations.............. :-)")   
+    print(f"Yayyyyy: You have guessed the correct number {random_num}. Congratulations.............. :-)")   
 guess(15)
 
 
