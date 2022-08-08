@@ -15,6 +15,35 @@ def guess(x):
         elif (guess > random_num):
             print("Your number is greater than computer's number try low")
     print(f"Yayyyyy: You have guessed the correct number {random_num}. Congratulations.............. :-)")   
-guess(15)
+
+def computer_guess(x):
+    lower_bound = 1
+    upper_bound = x
+
+    feedback = ''
+
+    while feedback != 'c':
+        guess = random.randint(lower_bound, upper_bound)
+        feedback = input(f"Is {guess} too Low (L), too high (H), or correct (C)").lower()
+
+        if feedback == 'h':
+            upper_bound = guess -1
+            print("Your Number is high, try Low")
+        elif feedback == 'l':
+            lower_bound = guess +1
+            print("Your Number is Low, try High")
+    
+    print(f"Yayyyy. Your Number {guess} is correct. Congrats")
+
+
+
+
+print("Please select You want guess the Number or Computer will guess the Number.")
+mode = input("Me | Computer:  ").lower()
+
+if mode == "me":
+    guess(15)
+elif mode == "computer":
+    computer_guess(15)
 
 
